@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering (if needed) */
+    min-height: 100vh;       /* Full viewport height for vertical centering */
+    margin: 0;               /* Remove default margin */
+}
+.green{ 
+    background-color: green;
+}
+
+.orange{
+    background-color: orange;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.button{
+    width: auto;
+    height: 30px;
+    flex-grow: 1;
+}
+.container{
+    width: 200px;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.row{
+    display:flex;
+}
+
+.display{
+    width: 120px;
+}
