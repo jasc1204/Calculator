@@ -79,7 +79,10 @@ buttons.forEach(button =>{
     }
     else if(button.textContent == "%")
     {
-        if(secondNumber != 0)
+        if(secondNumber == 0 && firstNumber == 0)
+            display.textContent = "0";
+
+        else if(secondNumber != 0)
         {
             secondNumber = parseFloat(secondNumber) /100;
             display.textContent = secondNumber;
@@ -155,11 +158,7 @@ buttons.forEach(button =>{
 
     else if(button.textContent == "=")
         operator(firstNumber,operatorS,secondNumber);
-    // console.log(firstNumber);
-    // console.log(operatorS);
-    // console.log(secondNumber);
 
-    
 });
 });
 function parseNumber(parseFirst,parseSecond,button)
@@ -169,7 +168,7 @@ function parseNumber(parseFirst,parseSecond,button)
     if(parseHere == 0)
     {
         if(button.textContent == "." && secondNumber.includes("."))
-            return;
+            return;        
         secondNumber = secondNumber + button.textContent 
         display.textContent = secondNumber;
     }  
@@ -182,7 +181,6 @@ function parseNumber(parseFirst,parseSecond,button)
         display.textContent = firstNumber;
 
     }
-    
 }
 
 function whichNumberToParse(parseFirst,parseSecond)
@@ -198,14 +196,14 @@ function whichNumberToParse(parseFirst,parseSecond)
 function operator(numberA,operator,numberB)
 {
     if(operator == "/")
-        divide(parseInt(numberA),parseInt(numberB));
+        divide(parseFloat(numberA),parseFloat(numberB));
 
     else if (operator == "*")
-        multiply(parseInt(numberA),parseInt(numberB));
+        multiply(parseFloat(numberA),parseFloat(numberB));
 
     else if(operator == "-")
-        subtract(parseInt(numberA),parseInt(numberB));
+        subtract(parseFloat(numberA),parseFloat(numberB));
 
     else if(operator == "+")
-        add(parseInt(numberA),parseInt(numberB));
+        add(parseFloat(numberA),parseFloat(numberB));
 }

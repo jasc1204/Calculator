@@ -17,15 +17,18 @@ body {
     background-color: blue;
 }
 
-.button{
-    width: auto;
-    height: 30px;
-    flex-grow: 1;
+.button {
+    height: 35px;
+    flex: 1;  /* ensures equal width distribution */
+    text-align: center; /* centers content within buttons */
 }
+
 .container{
     width: 200px;
     display:flex;
     flex-direction: column;
+    border:5px solid rgb(67, 54, 54); /* width | style | color */
+
 
 }
 
@@ -34,5 +37,9 @@ body {
 }
 
 .display{
-    width: 120px;
+    text-align: end;
+    background-color: #7FFFD4;
+    flex-grow: 1;
+    border: 3px solid rgb(67, 54, 54); /* width | style | color */
+    padding-right: 3px;
 }
